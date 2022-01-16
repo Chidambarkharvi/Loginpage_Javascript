@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./form1.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <style>
+      #username {
+        border: 1px solid lightgrey;
+        padding: 5px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1 style= "margin-top: 30px; text-align: center;"> Signup Form</h1> -->
+    
+    <div style="display: flex;flex-direction: row;">
+    <div style="margin-left: 80px ;margin-top: 50px; " class="row">
+
+      <div id="maindiv" class=" col-6">
+        <form>
+     
+          <!-- name -->
+          <div class="row">
+            <div class="col">
+              <label for=""> Name : </label>
+              <input
+              style="outline: 1px solid #ab1a23;"
+                type="text" 
+                placeholder="Enter Name"
+                id="username" 
+              />
+              <span
+                id="username-error"
+                class="error"
+                style="margin-left: 50px; font-size: 12px; color: #ab1a23"
+                ;
+              ></span>
+            </div>
+          </div>
+          <!-- name -->
+          <br />
+
+          <!-- AGE -->
+          <div>
+            <label for="">AGE : </label>
+            <input
+              style="border-radius: 5px; border: none; width: 70px; outline: 1px solid #ab1a23"
+              type="number"
+              placeholder="Age"
+              id="age"
+            />
+            <span
+              id="age-error"
+              style="margin-left: 50px; font-size: 12px; color: #ab1a23"
+              ;
+            ></span>
+          </div>
+          <!-- age -->
+          <br />
+
+          <!-- subjects -->
+
+          <div>
+            <label for="">Languages known : </label>
+            <div class="form-check form-check-inline">
+              <input
+                style="outline: 1px solid #ab1a23"
+                class="form-check-input checkBox"
+                type="checkbox"
+                id="inlineCheckbox1"
+              />
+              <label class="form-check-label" for="inlineCheckbox1">HTML</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                style="outline: 1px solid #ab1a23"
+                class="form-check-input checkBox"
+                type="checkbox"
+                id="inlineCheckbox2"
+                value="option2"
+              />
+              <label class="form-check-label" for="inlineCheckbox2">CSS</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                style="outline: 1px solid #ab1a23"
+                class="form-check-input checkBox"
+                type="checkbox"
+                id="inlineCheckbox3"
+                value="option3"
+              />
+              <label class="form-check-label" for="inlineCheckbox3"
+                >JAVASCRIPT</label
+              >
+            </div>
+          </div>
+          <span
+            id="checkBoxError"
+            style="
+              margin-left: 50px;
+              font-size: 12px;
+              color: #ab1a23;
+              display: none;
+            "
+          >
+            Please select atleast one option
+          </span>
+
+          <!-- subjects -->
+          <br />
+
+          <!-- gender -->
+
+          <div class="radioselect">
+            <label for=""> Gender : </label>
+            <div class="form-check form-check-inline">
+             
+              <input
+                style="outline: 1px solid #ab1a23"
+                class="form-check-input"
+                type="radio"
+                value="male"
+                name="inlineRadioOptions"
+                id="inlineRadio1"
+              />
+              <label class="form-check-label" for="inlineRadio1">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                style="outline: 1px solid #ab1a23"
+                class="form-check-input"
+                type="radio"
+                value="Female"
+                name="inlineRadioOptions"
+                id="inlineRadio2"
+              />
+              <label class="form-check-label" for="inlineRadio2">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                style="outline: 1px solid #ab1a23"
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio3"
+                value="Other"
+              />
+              <label class="form-check-label" for="inlineRadio3">other</label>
+            </div>
+          </div>
+          <span
+            id="RadioButtonShow"
+            style="
+              margin-left: 50px;
+              font-size: 12px;
+              color: #ab1a23;
+              display: none;
+            "
+          >
+            Please select one option
+          </span>
+
+          <!-- gender -->
+
+          <br />
+
+          <!-- password -->
+
+          <div>
+            <label for="inputPassword5">Password : </label>
+            <input
+              style="border-radius: 5px; border: none; outline: 1px solid #ab1a23"
+              type="password"
+              placeholder="Enter password"
+              id="inputPassword5"
+              aria-describedby="passwordHelpBlock"
+              class="password"
+            />
+            <input type="checkbox" onclick="myFunction()" />Show Password
+          </div>
+          <span
+            id="passwordError"
+            style="
+              margin-left: 50px;
+              font-size: 12px;
+              color: #ab1a23;
+              display: none;
+            "
+          >
+            password should contain atleast 8 characters , 1 number , 1 symbol
+          </span>
+
+          <!-- password -->
+
+          <br />
+
+          <!-- email -->
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Email address : </label>
+            <input
+              style="border-radius: 5px; border: none; outline: 1px solid #ab1a23"
+              id="exampleFormControlInput1"
+              placeholder="name@example.com"
+            />
+          </div>
+          <span
+            id="Email"
+            style="
+              margin-left: 50px;
+              font-size: 12px;
+              color: #ab1a23;
+              display: none;
+            "
+          >
+            Please provide a valid email address
+          </span>
+
+          <!-- email -->
+          <br />
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Select state : </label>
+            <select
+              style="border-radius: 5px; border: none; outline: 1px solid #ab1a23"
+              id="exampleFormControlSelect1"
+            >
+              <option value="state">select state</option>
+              <option value="karnataka">karnataka</option>
+              <option value="tamilnadu">tamilnadu</option>
+              <option value="up">UP</option>
+              <option value="mp">MP</option>
+              <option value="other">other</option>
+            </select>
+            <span
+              id="validState"
+              style="margin-left: 50px;  
+              
+              font-size: 12px;
+              
+              color: #ab1a23; display: none"
+            >
+              Please select state
+            </span>
+          </div>
+
+          <br />
+
+          <!-- terms and condition -->
+          <div>
+            <a href="" style="text-decoration: none ;color: black;">
+              Terms and Condition &nbsp;&nbsp;
+            </a>
+            <input
+              style="outline: 1px solid #ab1a23"
+              id="terms"
+              type="checkbox"
+            />
+          </div>
+          <span
+            id="TandC"
+            style="margin-left: 50px; color: #ab1a23; 
+            
+            
+            
+            
+              font-size: 12px;
+            display: none"
+          >
+            Please accept terms and condition
+          </span>
+
+          <!-- terms and condition -->
+
+          <br /><br />
+
+          <input
+            style="
+              border: 1px solid rgb(5, 146, 202);
+              border-radius: 4px;
+              background-color: rgb(135, 143, 250);
+            "
+            type="submit"
+            id="submit-button"
+          />
+          <input
+            style="
+              border: 1px solid rgb(235, 95, 137);
+              border-radius: 4px;
+              background-color: rgb(223, 86, 86);
+            "
+            type="reset"
+            name=""
+            id=""
+          />
+        </form>
+      </div>
+
+      <!-- <div class="Data col-6" style="visibility: hidden" id="div">
+        <table
+          id="show"
+          style="border: 3px solid red"
+          cellspacing="15px;"
+          border="6"
+          cellpadding="10px;"
+        >
+          <tr style="border: 2px solid red">
+            <th>Name</th>
+            <th>AGE</th>
+            <th>Gender</th>
+            <th>Email</th>
+          </tr>
+        </table>
+      </div> -->
+    </div>
+    
+
+
+    <div style="margin-top:110PX;margin-left: 10PX;">
+      <img height="520PX" width="520px" style="border-radius: 10px;" src="./Screenshot 2022-01-12 090203.png" />
+    </div>
+
+    
+</div>
+
+  </div>
+    <script src="./login.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
